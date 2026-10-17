@@ -19,11 +19,11 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfo;
 public abstract class LevelRendererMixin {
     @Shadow
     @Final
-    private SimpleGizmoCollector renderThreadGizmos;
+    private SimpleGizmoCollector collectedGizmos;
 
     @Inject(method = "finalizeGizmoCollection", at = @At("HEAD"))
     private void aimpreview$emitGizmos(CallbackInfo ci) {
-        try (Gizmos.TemporaryCollection ignored = Gizmos.withCollector(this.renderThreadGizmos)) {
+        try (Gizmos.TemporaryCollection ignored = Gizmos.withCollector(this.collectedGizmos)) {
             AimPreviewClient.emitGizmos();
         }
     }

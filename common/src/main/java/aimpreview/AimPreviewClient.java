@@ -124,7 +124,7 @@ public final class AimPreviewClient {
     }
 
     private static boolean visible(Minecraft mc, AimPreviewConfig config) {
-        return config.enabled && !(config.hideWithHud && mc.gui.hud.isHidden());
+        return config.enabled && !(config.hideWithHud && mc.options.hideGui);
     }
 
     private static List<Trajectory> simulate(Minecraft mc, List<Launch> launches, AimPreviewConfig config) {

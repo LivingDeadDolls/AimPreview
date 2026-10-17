@@ -1,5 +1,6 @@
 package aimpreview.render;
 
+import aimpreview.mixin.GameRendererAccessor;
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.renderer.state.level.CameraRenderState;
 import net.minecraft.util.Mth;
@@ -44,7 +45,7 @@ public final class ViewBob {
     }
 
     private static @Nullable CameraRenderState camera(Minecraft mc) {
-        return mc.gameRenderer.gameRenderState().levelRenderState.cameraRenderState;
+        return ((GameRendererAccessor) mc.gameRenderer).aimpreview$gameRenderState().levelRenderState.cameraRenderState;
     }
 
     /**
