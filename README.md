@@ -30,6 +30,8 @@ Just install it on your client; it also works on vanilla servers (nothing needs 
 - **Line styles**: a solid line, a dashed line or a row of small cubes, in any color and width. The path can also be drawn through walls.
   While you walk, the line in front of you stays steady with the crosshair even with View Bobbing on.
 
+  ![Walking with a snowball: on the left the line sways with View Bobbing, on the right (the default) it stays under the crosshair](docs/images/walking-compare.gif)
+
 ## Settings
 
 Everything above can be turned on or off and adjusted in the settings screen, opened from [Mod Menu](https://modrinth.com/mod/modmenu).
